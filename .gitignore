@@ -40,7 +40,7 @@ yarn-error.log*
 next-env.d.ts
 
 Backend/venv
-Backend/__pycache__
+*__pycache__
 *.DS_Store
 
 

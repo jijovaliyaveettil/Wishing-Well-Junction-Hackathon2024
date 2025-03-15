@@ -1,9 +1,14 @@
 from pydantic import BaseModel
-from typing import Optional
 
-
-class UserModel(BaseModel):
+class UserBase(BaseModel):
     name: str
     email: str
-    password: str
-    notes:Optional[str]
+
+class UserCreate(UserBase):
+    pass
+
+class UserRead(UserBase):
+    id: int
+
+    class Config:
+        orm_mode = True
